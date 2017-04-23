@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="panneau" prefHeight="707.0" prefWidth="956.0" style="-fx-background-color: #24445C;" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projet.FXMLDocumentController">
+    <children>
+        <DatePicker fx:id="dateur" layoutX="14.0" layoutY="42.0" prefHeight="25.0" prefWidth="150.0" promptText="Date" style="-fx-background-color: #FEFEE2;" />
+        <Separator layoutY="76.0" prefHeight="11.0" prefWidth="975.0" />
+        <Button fx:id="Afficher" layoutX="393.0" layoutY="42.0" mnemonicParsing="false" onAction="#afficher" prefHeight="27.0" prefWidth="182.0" style="-fx-background-color: #FEFEE2;" text="Afficher " textFill="#000000a9">
+         <font>
+            <Font name="Berlin Sans FB" size="15.0" />
+         </font></Button>
+        <ComboBox fx:id="ville" editable="true" layoutX="195.0" layoutY="42.0" prefHeight="25.0" prefWidth="170.0" promptText="Station" style="-fx-background-color: #FEFEE2; -fx-background-size: 15;" />
+        <ComboBox fx:id="choix" layoutX="561.0" layoutY="414.0" prefWidth="150.0" />
+          <TableView fx:id="tableau" layoutX="6.0" layoutY="82.0" prefHeight="621.0" prefWidth="420.0">
+         <columns>
+            <TableColumn fx:id="Date" prefWidth="111.0" text="Date" />
+            <TableColumn fx:id="Temeperature" prefWidth="100.0" text="Température" />
+            <TableColumn fx:id="Humidite" prefWidth="100.0" text="Humidité" />
+            <TableColumn fx:id="Nebulosite" prefWidth="107.0" text="Nébulosité" />
+         </columns>
+      </TableView>
+      <LineChart fx:id="graphique" layoutX="461.0" layoutY="291.0" prefHeight="402.0" prefWidth="498.0" style="-fx-background-color: #FEFEFE;">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" style="-fx-background-color: #FEFEFE;" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <MenuBar prefHeight="25.0" prefWidth="975.0" />
+      <Label layoutX="711.0" layoutY="15.0" prefHeight="79.0" prefWidth="249.0" text="SMARTClimat" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="32.0" />
+         </font>
+      </Label>
+      <Separator layoutX="426.0" layoutY="119.0" prefHeight="11.0" prefWidth="549.0" />
+      <Button fx:id="Afficher1" layoutX="736.0" layoutY="87.0" mnemonicParsing="false" onAction="#aff" prefHeight="27.0" prefWidth="170.0" style="-fx-background-color: #FEFEE2;" text="Ecart type" textFill="#000000a9">
+         <font>
+            <Font name="Berlin Sans FB" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="kelvin" layoutX="488.0" layoutY="87.0" mnemonicParsing="false" onAction="#kelvin" prefHeight="27.0" prefWidth="182.0" style="-fx-background-color: #FEFEE2;" text="Temperature en Kelvin" textFill="#000000a9">
+         <font>
+            <Font name="Berlin Sans FB" size="15.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>
